@@ -6,14 +6,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
 export const BusinessModel = () => {
-  const [annualCalls, setAnnualCalls] = useState([10000]);
-  const [costPerCall, setCostPerCall] = useState([25]);
-  const [aiReduction, setAiReduction] = useState([70]);
-  const [platformCost, setPlatformCost] = useState(75000);
+  const [patientCount, setPatientCount] = useState([500]);
+  const [monthlyRatePerPatient, setMonthlyRatePerPatient] = useState([15]);
+  const [currentCostPerPatient, setCurrentCostPerPatient] = useState([45]);
 
-  const currentAnnualCost = annualCalls[0] * costPerCall[0];
-  const reductionAmount = (currentAnnualCost * aiReduction[0]) / 100;
-  const annualROI = reductionAmount - platformCost;
+  const monthlyFollowUpCost = patientCount[0] * monthlyRatePerPatient[0];
+  const currentMonthlyCost = patientCount[0] * currentCostPerPatient[0];
+  const monthlyROI = currentMonthlyCost - monthlyFollowUpCost;
+  const annualROI = monthlyROI * 12;
 
   return (
     <section id="business" className="py-20 bg-gray-50">
@@ -37,8 +37,8 @@ export const BusinessModel = () => {
                   <DollarSign className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">SaaS Licensing</h4>
-                  <p className="text-gray-600">Monthly or annual subscriptions based on patient volume and feature tiers</p>
+                  <h4 className="font-semibold text-gray-900 mb-1">Per-Patient Monthly Pricing</h4>
+                  <p className="text-gray-600">Simple monthly rate per patient enrolled, scaling with your patient volume</p>
                 </div>
               </div>
 
@@ -47,8 +47,8 @@ export const BusinessModel = () => {
                   <Users className="h-6 w-6 text-green-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Per-Patient Model</h4>
-                  <p className="text-gray-600">Pay per patient enrolled, aligning costs with actual usage and outcomes</p>
+                  <h4 className="font-semibold text-gray-900 mb-1">Volume Discounts</h4>
+                  <p className="text-gray-600">Tiered pricing with lower per-patient rates for larger health systems</p>
                 </div>
               </div>
 
@@ -58,7 +58,7 @@ export const BusinessModel = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Enterprise Packages</h4>
-                  <p className="text-gray-600">Custom pricing for large health systems with volume discounts</p>
+                  <p className="text-gray-600">Custom pricing for large health systems with additional features and support</p>
                 </div>
               </div>
             </div>
@@ -70,83 +70,72 @@ export const BusinessModel = () => {
             <div className="space-y-6">
               <div>
                 <Label className="text-sm font-medium text-gray-700 mb-2 block">
-                  Annual follow-up calls: {annualCalls[0].toLocaleString()}
+                  Number of patients: {patientCount[0].toLocaleString()}
                 </Label>
                 <Slider
-                  value={annualCalls}
-                  onValueChange={setAnnualCalls}
-                  max={50000}
-                  min={1000}
-                  step={1000}
+                  value={patientCount}
+                  onValueChange={setPatientCount}
+                  max={5000}
+                  min={100}
+                  step={50}
                   className="w-full"
                 />
               </div>
 
               <div>
                 <Label className="text-sm font-medium text-gray-700 mb-2 block">
-                  Cost per call (staff time): ${costPerCall[0]}
+                  FollowUp monthly rate per patient: ${monthlyRatePerPatient[0]}
                 </Label>
                 <Slider
-                  value={costPerCall}
-                  onValueChange={setCostPerCall}
+                  value={monthlyRatePerPatient}
+                  onValueChange={setMonthlyRatePerPatient}
+                  max={50}
+                  min={5}
+                  step={1}
+                  className="w-full"
+                />
+              </div>
+
+              <div>
+                <Label className="text-sm font-medium text-gray-700 mb-2 block">
+                  Current monthly cost per patient (staff time): ${currentCostPerPatient[0]}
+                </Label>
+                <Slider
+                  value={currentCostPerPatient}
+                  onValueChange={setCurrentCostPerPatient}
                   max={100}
-                  min={10}
+                  min={20}
                   step={5}
-                  className="w-full"
-                />
-              </div>
-
-              <div>
-                <Label className="text-sm font-medium text-gray-700 mb-2 block">
-                  Cost reduction with AI: {aiReduction[0]}%
-                </Label>
-                <Slider
-                  value={aiReduction}
-                  onValueChange={setAiReduction}
-                  max={90}
-                  min={50}
-                  step={5}
-                  className="w-full"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="platform-cost" className="text-sm font-medium text-gray-700 mb-2 block">
-                  Annual FollowUp platform cost:
-                </Label>
-                <Input
-                  id="platform-cost"
-                  type="number"
-                  value={platformCost}
-                  onChange={(e) => setPlatformCost(Number(e.target.value))}
                   className="w-full"
                 />
               </div>
 
               <div className="border-t pt-4 space-y-3">
                 <div className="flex justify-between items-center py-2">
-                  <span className="text-gray-600">Current annual cost:</span>
-                  <span className="font-semibold text-red-600">${currentAnnualCost.toLocaleString()}</span>
+                  <span className="text-gray-600">Current monthly cost:</span>
+                  <span className="font-semibold text-red-600">${currentMonthlyCost.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
-                  <span className="text-gray-600">Annual savings with AI:</span>
-                  <span className="font-semibold text-green-600">${reductionAmount.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-gray-600">Platform cost:</span>
-                  <span className="font-semibold text-blue-600">-${platformCost.toLocaleString()}</span>
+                  <span className="text-gray-600">FollowUp monthly cost:</span>
+                  <span className="font-semibold text-blue-600">${monthlyFollowUpCost.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between items-center py-2 pt-4 border-t">
-                  <span className="text-gray-900 font-semibold text-lg">Net Annual ROI:</span>
+                  <span className="text-gray-900 font-semibold text-lg">Monthly Savings:</span>
+                  <span className={`font-bold text-xl ${monthlyROI > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                    {monthlyROI > 0 ? '+' : ''}${monthlyROI.toLocaleString()}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-900 font-semibold text-lg">Annual Savings:</span>
                   <span className={`font-bold text-xl ${annualROI > 0 ? 'text-green-600' : 'text-red-600'}`}>
                     {annualROI > 0 ? '+' : ''}${annualROI.toLocaleString()}
                   </span>
                 </div>
                 <div className="text-center pt-2">
-                  <span className={`text-sm font-medium ${annualROI > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                    {annualROI > 0 
-                      ? `${Math.round((annualROI / platformCost) * 100)}% return on investment`
-                      : 'Adjust parameters to see positive ROI'
+                  <span className={`text-sm font-medium ${monthlyROI > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                    {monthlyROI > 0 
+                      ? `${Math.round((monthlyROI / monthlyFollowUpCost) * 100)}% cost reduction`
+                      : 'Adjust parameters to see positive savings'
                     }
                   </span>
                 </div>

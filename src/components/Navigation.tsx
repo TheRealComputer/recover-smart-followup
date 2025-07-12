@@ -22,7 +22,7 @@ export const Navigation = () => {
             <div className="bg-blue-600 p-2 rounded-lg">
               <Activity className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">CareFlow AI</span>
+            <span className="text-xl font-bold text-gray-900">FollowUp</span>
           </div>
 
           {/* Desktop Navigation */}
