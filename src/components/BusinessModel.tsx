@@ -1,8 +1,20 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { DollarSign, TrendingUp, Users, BarChart } from 'lucide-react';
+import { Slider } from '@/components/ui/slider';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export const BusinessModel = () => {
+  const [annualCalls, setAnnualCalls] = useState([10000]);
+  const [costPerCall, setCostPerCall] = useState([25]);
+  const [aiReduction, setAiReduction] = useState([70]);
+  const [platformCost, setPlatformCost] = useState(75000);
+
+  const currentAnnualCost = annualCalls[0] * costPerCall[0];
+  const reductionAmount = (currentAnnualCost * aiReduction[0]) / 100;
+  const annualROI = reductionAmount - platformCost;
+
   return (
     <section id="business" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +27,7 @@ export const BusinessModel = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           <div>
             <h3 className="text-3xl font-bold text-gray-900 mb-6">Revenue Model</h3>
             
@@ -52,29 +64,92 @@ export const BusinessModel = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-            <h4 className="text-xl font-semibold text-gray-900 mb-6">ROI Calculator</h4>
+          <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <h4 className="text-xl font-semibold text-gray-900 mb-6">Interactive ROI Calculator</h4>
             
-            <div className="space-y-4">
-              <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                <span className="text-gray-600">Annual follow-up calls:</span>
-                <span className="font-semibold">10,000</span>
+            <div className="space-y-6">
+              <div>
+                <Label className="text-sm font-medium text-gray-700 mb-2 block">
+                  Annual follow-up calls: {annualCalls[0].toLocaleString()}
+                </Label>
+                <Slider
+                  value={annualCalls}
+                  onValueChange={setAnnualCalls}
+                  max={50000}
+                  min={1000}
+                  step={1000}
+                  className="w-full"
+                />
               </div>
-              <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                <span className="text-gray-600">Cost per call (staff time):</span>
-                <span className="font-semibold">$25</span>
+
+              <div>
+                <Label className="text-sm font-medium text-gray-700 mb-2 block">
+                  Cost per call (staff time): ${costPerCall[0]}
+                </Label>
+                <Slider
+                  value={costPerCall}
+                  onValueChange={setCostPerCall}
+                  max={100}
+                  min={10}
+                  step={5}
+                  className="w-full"
+                />
               </div>
-              <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                <span className="text-gray-600">Current annual cost:</span>
-                <span className="font-semibold text-red-600">$250,000</span>
+
+              <div>
+                <Label className="text-sm font-medium text-gray-700 mb-2 block">
+                  Cost reduction with AI: {aiReduction[0]}%
+                </Label>
+                <Slider
+                  value={aiReduction}
+                  onValueChange={setAiReduction}
+                  max={90}
+                  min={50}
+                  step={5}
+                  className="w-full"
+                />
               </div>
-              <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                <span className="text-gray-600">70% reduction with AI:</span>
-                <span className="font-semibold text-green-600">$175,000 saved</span>
+
+              <div>
+                <Label htmlFor="platform-cost" className="text-sm font-medium text-gray-700 mb-2 block">
+                  Annual FollowUp platform cost:
+                </Label>
+                <Input
+                  id="platform-cost"
+                  type="number"
+                  value={platformCost}
+                  onChange={(e) => setPlatformCost(Number(e.target.value))}
+                  className="w-full"
+                />
               </div>
-              <div className="flex justify-between items-center py-2 pt-4">
-                <span className="text-gray-900 font-semibold">Annual ROI:</span>
-                <span className="font-bold text-green-600 text-xl">$150,000+</span>
+
+              <div className="border-t pt-4 space-y-3">
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600">Current annual cost:</span>
+                  <span className="font-semibold text-red-600">${currentAnnualCost.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600">Annual savings with AI:</span>
+                  <span className="font-semibold text-green-600">${reductionAmount.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600">Platform cost:</span>
+                  <span className="font-semibold text-blue-600">-${platformCost.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between items-center py-2 pt-4 border-t">
+                  <span className="text-gray-900 font-semibold text-lg">Net Annual ROI:</span>
+                  <span className={`font-bold text-xl ${annualROI > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                    {annualROI > 0 ? '+' : ''}${annualROI.toLocaleString()}
+                  </span>
+                </div>
+                <div className="text-center pt-2">
+                  <span className={`text-sm font-medium ${annualROI > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                    {annualROI > 0 
+                      ? `${Math.round((annualROI / platformCost) * 100)}% return on investment`
+                      : 'Adjust parameters to see positive ROI'
+                    }
+                  </span>
+                </div>
               </div>
             </div>
           </div>
