@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { Hero } from '@/components/Hero';
-import { ProblemSection } from '@/components/ProblemSection';
+import { WorkflowSection } from '@/components/WorkflowSection';
 import { SolutionSection } from '@/components/SolutionSection';
+import { CompetitiveAdvantage } from '@/components/CompetitiveAdvantage';
 
 import { BusinessModel } from '@/components/BusinessModel';
 import { Features } from '@/components/Features';
@@ -14,10 +15,10 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       <Hero />
-      <ProblemSection />
+      <WorkflowSection />
       <SolutionSection />
+      <CompetitiveAdvantage />
       <Features />
-      
       <BusinessModel />
       <Contact />
     </div>
