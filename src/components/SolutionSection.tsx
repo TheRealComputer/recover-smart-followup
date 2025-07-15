@@ -8,10 +8,10 @@ export const SolutionSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Our AI-Powered Solution
+            Our Solution: AI That Actually Works
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A comprehensive multi-layered platform that transforms patient follow-up care through intelligent automation and personalized monitoring.
+            We've built the first AI platform that meaningfully automates patient follow-up. Here's what makes us different from every other healthcare AI company.
           </p>
         </div>
 
@@ -22,9 +22,9 @@ export const SolutionSection = () => {
                 <Smartphone className="h-8 w-8 text-blue-600" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Patient Mobile App</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Conversational AI That Patients Trust</h3>
                 <p className="text-gray-600">
-                  AI-driven conversational agents check on symptoms, adherence, and concerns. Provides gentle education, reminders, and intelligently summarizes key findings for providers.
+                  Unlike generic chatbots, our AI understands medical context. It conducts symptom assessments, medication adherence checks, and provides personalized education - reducing 90% of routine follow-up calls.
                 </p>
               </div>
             </div>
@@ -34,9 +34,9 @@ export const SolutionSection = () => {
                 <Database className="h-8 w-8 text-green-600" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">EMR Integration</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Deep EMR Integration</h3>
                 <p className="text-gray-600">
-                  FHIR-based integration ingests procedures, medications, and care plans, ensuring follow-ups are personalized to each patient's medical context.
+                  We plug directly into Epic, Cerner, and other major EMRs. The AI knows each patient's procedure, medications, and risk factors - enabling truly personalized follow-up protocols.
                 </p>
               </div>
             </div>
@@ -46,9 +46,9 @@ export const SolutionSection = () => {
                 <Brain className="h-8 w-8 text-red-600" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent Triage</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Clinical Triage</h3>
                 <p className="text-gray-600">
-                  Real-time flagging of urgent issues sent to provider dashboard, dramatically reducing manual triage workload while improving response times.
+                  Our AI identifies urgent issues in real-time and escalates appropriately. This prevents complications while eliminating the need for nurses to manually review every patient interaction.
                 </p>
               </div>
             </div>
@@ -58,9 +58,9 @@ export const SolutionSection = () => {
                 <Shield className="h-8 w-8 text-purple-600" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Clinical Documentation</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Structured Clinical Notes</h3>
                 <p className="text-gray-600">
-                  Generates structured SOAP-style summaries for clinicians, improving visit preparation and documentation quality.
+                  Every patient interaction becomes a structured clinical summary. Doctors get SOAP notes ready for billing and continuity of care - saving hours per week.
                 </p>
               </div>
             </div>
@@ -100,9 +100,9 @@ export const SolutionSection = () => {
         </div>
 
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">The Result: Proactive, Personalized Care</h3>
+          <h3 className="text-2xl font-bold mb-4">Why This Is a Billion-Dollar Opportunity</h3>
           <p className="text-lg opacity-90 max-w-3xl mx-auto">
-            Transform reactive follow-up into proactive patient engagement, reducing provider workload while improving outcomes and patient satisfaction.
+            We're not just another healthcare AI company. We've solved the fundamental problem of making AI actually useful in clinical workflows - and hospitals will pay premium prices for this solution.
           </p>
         </div>
       </div>

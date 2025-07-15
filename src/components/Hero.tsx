@@ -14,11 +14,11 @@ export const Hero = () => {
                 <span>Next-Generation Healthcare AI</span>
               </div>
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Revolutionize
+                The $50B Problem in
                 <span className="text-blue-600 block">Patient Follow-Up</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                AI-powered post-operative and patient follow-up platform that reduces provider workload by 70% while improving patient outcomes through intelligent monitoring and personalized care.
+                We're building the AI platform that automates post-operative care, reducing hospital costs by 70% while improving patient outcomes. The market is massive, the problem is urgent.
               </p>
             </div>
 
@@ -34,16 +34,16 @@ export const Hero = () => {
 
             <div className="flex items-center space-x-8 pt-8">
               <div className="text-center">
+                <div className="text-2xl font-bold text-gray-900">$50B</div>
+                <div className="text-sm text-gray-600">Market Size</div>
+              </div>
+              <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900">70%</div>
-                <div className="text-sm text-gray-600">Workload Reduction</div>
+                <div className="text-sm text-gray-600">Cost Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">24/7</div>
-                <div className="text-sm text-gray-600">Patient Monitoring</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">HIPAA</div>
-                <div className="text-sm text-gray-600">Compliant</div>
+                <div className="text-2xl font-bold text-gray-900">5M+</div>
+                <div className="text-sm text-gray-600">Procedures/Year</div>
               </div>
             </div>
           </div>
