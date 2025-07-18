@@ -23,83 +23,48 @@ export const WorkflowSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-7 gap-8 items-center">
+        <div className="grid lg:grid-cols-4 gap-12 max-w-5xl mx-auto">
           {/* Step 1 */}
           <div className="text-center group">
-            <div className="relative">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors">
-                <Database className="h-8 w-8 text-blue-600" />
-              </div>
-              <div className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
-                1
-              </div>
+            <div className="bg-blue-50 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-100 transition-all duration-300">
+              <Database className="h-10 w-10 text-blue-600" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">EMR Integration</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Automatically pulls patient procedures, medications, and care plans from Epic, Cerner, or any FHIR-compliant EMR
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">EMR Integration</h3>
+            <p className="text-gray-600 text-sm">
+              Pulls patient data from Epic, Cerner, or any FHIR EMR
             </p>
-          </div>
-
-          {/* Arrow */}
-          <div className="hidden lg:flex items-center justify-center">
-            <ArrowDown className="h-6 w-6 text-gray-400 rotate-90" />
           </div>
 
           {/* Step 2 */}
           <div className="text-center group">
-            <div className="relative">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200 transition-colors">
-                <MessageSquare className="h-8 w-8 text-green-600" />
-              </div>
-              <div className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
-                2
-              </div>
+            <div className="bg-green-50 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-100 transition-all duration-300">
+              <MessageSquare className="h-10 w-10 text-green-600" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Conversations</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Personalized AI conducts daily check-ins via mobile app, assessing symptoms, medication adherence, and recovery progress
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Check-ins</h3>
+            <p className="text-gray-600 text-sm">
+              Daily conversations assess symptoms and medication adherence
             </p>
-          </div>
-
-          {/* Arrow */}
-          <div className="hidden lg:flex items-center justify-center">
-            <ArrowDown className="h-6 w-6 text-gray-400 rotate-90" />
           </div>
 
           {/* Step 3 */}
           <div className="text-center group">
-            <div className="relative">
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-200 transition-colors">
-                <AlertTriangle className="h-8 w-8 text-red-600" />
-              </div>
-              <div className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
-                3
-              </div>
+            <div className="bg-amber-50 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-100 transition-all duration-300">
+              <AlertTriangle className="h-10 w-10 text-amber-600" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Smart Triage</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              AI identifies urgent issues in real-time and automatically escalates to providers while routine responses are handled automatically
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Smart Triage</h3>
+            <p className="text-gray-600 text-sm">
+              Identifies urgent issues and escalates to providers automatically
             </p>
-          </div>
-
-          {/* Arrow */}
-          <div className="hidden lg:flex items-center justify-center">
-            <ArrowDown className="h-6 w-6 text-gray-400 rotate-90" />
           </div>
 
           {/* Step 4 */}
           <div className="text-center group">
-            <div className="relative">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-200 transition-colors">
-                <FileText className="h-8 w-8 text-purple-600" />
-              </div>
-              <div className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
-                4
-              </div>
+            <div className="bg-purple-50 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-100 transition-all duration-300">
+              <FileText className="h-10 w-10 text-purple-600" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Clinical Documentation</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Every interaction becomes a structured SOAP note ready for EMR integration
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Documentation</h3>
+            <p className="text-gray-600 text-sm">
+              Creates structured SOAP notes for EMR integration
             </p>
           </div>
         </div>

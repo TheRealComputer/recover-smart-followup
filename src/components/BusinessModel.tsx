@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
 export const BusinessModel = () => {
-  const [patientCount, setPatientCount] = useState([500]);
+  const [patientCount, setPatientCount] = useState([50]);
   const [monthlyRatePerPatient, setMonthlyRatePerPatient] = useState([15]);
   const [currentCostPerPatient, setCurrentCostPerPatient] = useState([45]);
 
@@ -75,9 +75,9 @@ export const BusinessModel = () => {
                 <Slider
                   value={patientCount}
                   onValueChange={setPatientCount}
-                  max={5000}
-                  min={100}
-                  step={50}
+                  max={200}
+                  min={10}
+                  step={10}
                   className="w-full"
                 />
               </div>
