@@ -8,10 +8,6 @@ export const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center space-y-8">
           <div className="space-y-6">
-            <div className="flex items-center justify-center space-x-2 text-blue-600 font-medium text-sm">
-              <Shield className="h-4 w-4" />
-              <span>Backed by Y Combinator</span>
-            </div>
             
             <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-tight max-w-4xl mx-auto">
               Your AI teammate for

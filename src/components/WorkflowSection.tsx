@@ -23,7 +23,7 @@ export const WorkflowSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-7 gap-8 items-center">
           {/* Step 1 */}
           <div className="text-center group">
             <div className="relative">
@@ -81,22 +81,29 @@ export const WorkflowSection = () => {
               AI identifies urgent issues in real-time and automatically escalates to providers while routine responses are handled automatically
             </p>
           </div>
-        </div>
 
-        <div className="flex justify-center mt-12 mb-16">
-          <ArrowDown className="h-8 w-8 text-gray-400" />
-        </div>
-
-        {/* Final Step */}
-        <div className="text-center">
-          <div className="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <FileText className="h-10 w-10 text-purple-600" />
+          {/* Arrow */}
+          <div className="hidden lg:flex items-center justify-center">
+            <ArrowDown className="h-6 w-6 text-gray-400 rotate-90" />
           </div>
-          <h3 className="text-2xl font-semibold text-gray-900 mb-3">Clinical Documentation</h3>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-            Every interaction becomes a structured SOAP note ready for EMR integration, billing, and continuity of care
-          </p>
+
+          {/* Step 4 */}
+          <div className="text-center group">
+            <div className="relative">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-200 transition-colors">
+                <FileText className="h-8 w-8 text-purple-600" />
+              </div>
+              <div className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
+                4
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Clinical Documentation</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Every interaction becomes a structured SOAP note ready for EMR integration
+            </p>
+          </div>
         </div>
+
 
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 mt-16">
           <div className="grid md:grid-cols-3 gap-8 text-white text-center">
