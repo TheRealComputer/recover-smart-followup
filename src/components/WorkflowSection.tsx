@@ -31,7 +31,7 @@ export const WorkflowSection = () => {
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">EMR Integration</h3>
             <p className="text-gray-600 text-sm">
-              Pulls patient data from Epic, Cerner, or any FHIR EMR
+              Connects with your existing systems to access patient data
             </p>
           </div>
 
@@ -76,22 +76,22 @@ export const WorkflowSection = () => {
               <div className="flex items-center justify-center mb-4">
                 <Clock className="h-8 w-8" />
               </div>
-              <div className="text-2xl font-bold mb-2">70% Less Time</div>
-              <p className="opacity-90">Spent on follow-up calls</p>
+              <div className="text-2xl font-bold mb-2">Automated</div>
+              <p className="opacity-90">24/7 patient monitoring</p>
             </div>
             <div>
               <div className="flex items-center justify-center mb-4">
                 <Brain className="h-8 w-8" />
               </div>
-              <div className="text-2xl font-bold mb-2">90% Accuracy</div>
-              <p className="opacity-90">In symptom assessment</p>
+              <div className="text-2xl font-bold mb-2">Intelligent</div>
+              <p className="opacity-90">AI-powered symptom assessment</p>
             </div>
             <div>
               <div className="flex items-center justify-center mb-4">
                 <Smartphone className="h-8 w-8" />
               </div>
-              <div className="text-2xl font-bold mb-2">24/7 Monitoring</div>
-              <p className="opacity-90">Patient engagement</p>
+              <div className="text-2xl font-bold mb-2">Connected</div>
+              <p className="opacity-90">Seamless care coordination</p>
             </div>
           </div>
         </div>

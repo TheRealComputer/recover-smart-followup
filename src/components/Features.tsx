@@ -7,31 +7,31 @@ export const Features = () => {
     {
       icon: MessageCircle,
       title: "Conversational AI",
-      description: "LLaMA 3-based agents provide natural, context-aware patient interactions with dynamic symptom assessment.",
+      description: "Natural, context-aware patient interactions with dynamic symptom assessment and personalized responses.",
       color: "blue"
     },
     {
       icon: Bell,
       title: "Smart Reminders",
-      description: "Rule-based medication, wound care, and activity reminders personalized to each patient's care plan.",
+      description: "Automated medication, wound care, and activity reminders personalized to each patient's care plan.",
       color: "green"
     },
     {
       icon: BarChart,
       title: "Provider Dashboard",
-      description: "Real-time patient monitoring with intelligent alerts and comprehensive analytics for better decision-making.",
+      description: "Real-time patient monitoring with intelligent alerts and comprehensive analytics for better decisions.",
       color: "purple"
     },
     {
       icon: Calendar,
       title: "Care Plan Integration",
-      description: "Seamless FHIR-based EMR integration with Epic, Cerner, and Athena for personalized follow-up protocols.",
+      description: "Seamless integration with existing systems for personalized follow-up protocols and care coordination.",
       color: "orange"
     },
     {
       icon: Shield,
-      title: "HIPAA Compliant",
-      description: "Serverless AWS architecture with enterprise-grade security and full HIPAA compliance built-in.",
+      title: "Secure & Compliant",
+      description: "Enterprise-grade security with full healthcare compliance and data protection built-in.",
       color: "red"
     },
     {
@@ -91,12 +91,12 @@ export const Features = () => {
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
               <div className="font-semibold text-gray-900 mb-1">Patient Satisfaction</div>
-              <div className="text-sm text-gray-600">Improved patient experience with 24/7 AI support</div>
+              <div className="text-sm text-gray-600">Improved patient experience with 24/7 support</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">70%</div>
-              <div className="font-semibold text-gray-900 mb-1">Workload Reduction</div>
-              <div className="text-sm text-gray-600">Less time on routine follow-up calls</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">90%</div>
+              <div className="font-semibold text-gray-900 mb-1">Accuracy Rate</div>
+              <div className="text-sm text-gray-600">In symptom assessment and triage</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-600 mb-2">45%</div>
