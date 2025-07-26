@@ -126,9 +126,6 @@ export const WorkflowSection = () => {
         </div>
 
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Feature Set
-          </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               const colors = getColorClasses(feature.color);

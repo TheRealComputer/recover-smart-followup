@@ -10,12 +10,12 @@ export const Hero = () => {
           <div className="space-y-6">
             
             <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-tight max-w-4xl mx-auto">
-              Your AI teammate for
-              <span className="text-blue-600 block">patient follow-up</span>
+              <span className="text-blue-600 block">AI Automation</span>
+              for Post-Op Follow-Ups
             </h1>
             
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              FollowUp automates post-operative care monitoring, reducing provider workload by 70% while improving patient outcomes through intelligent 24/7 engagement.
+              FollowUp automates post-operative care monitoring, reducing provider workload while improving patient outcomes through intelligent engagement.
             </p>
           </div>
 
