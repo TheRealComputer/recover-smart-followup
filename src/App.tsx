@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+console.log('FollowUp AI App Loading...');
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
