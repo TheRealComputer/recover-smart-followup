@@ -39,4 +39,17 @@ jobs:
         remove_files: |
           dist/
           node_modules/
-          .DS_Store 
+          .DS_Store
+          .git/
+          .github/
+          src/
+          public/
+          package.json
+          package-lock.json
+          tsconfig.json
+          vite.config.ts
+          tailwind.config.ts
+          eslint.config.js
+          postcss.config.js
+          components.json
+          README.md 
