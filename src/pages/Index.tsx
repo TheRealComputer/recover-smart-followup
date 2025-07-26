@@ -5,7 +5,7 @@ import { Problem } from '@/components/Problem';
 import { WorkflowSection } from '@/components/WorkflowSection';
 import { CompetitiveAdvantage } from '@/components/CompetitiveAdvantage';
 import { Demo } from '@/components/Demo';
-import { Contact } from '@/components/Contact';
+
 import { Navigation } from '@/components/Navigation';
 
 const Index = () => {
@@ -17,7 +17,7 @@ const Index = () => {
       <WorkflowSection />
       <CompetitiveAdvantage />
       <Demo />
-      <Contact />
+      
     </div>
   );
 };
