@@ -107,7 +107,7 @@ export const CompetitiveAdvantage = () => {
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Medical-Grade AI</h3>
             <p className="text-gray-600 text-sm">
-              Unlike generic chatbots, our AI understands medical context, procedures, and clinical protocols
+              Purpose-built for healthcare, understanding medical context and clinical protocols
             </p>
           </div>
 

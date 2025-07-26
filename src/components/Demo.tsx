@@ -1,6 +1,5 @@
 import React from 'react';
-import { Play, Smartphone, Monitor, MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Smartphone, Monitor, MessageSquare } from 'lucide-react';
 
 export const Demo = () => {
   return (
@@ -46,18 +45,11 @@ export const Demo = () => {
                 <Monitor className="h-6 w-6 text-purple-600" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Provider Dashboard</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">EMR Integrated Provider Dashboard</h3>
                 <p className="text-gray-600">
                   Healthcare teams get real-time insights with urgent issues flagged immediately and routine updates summarized.
                 </p>
               </div>
-            </div>
-
-            <div className="pt-6">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                <Play className="h-4 w-4 mr-2" />
-                Watch Demo Video
-              </Button>
             </div>
           </div>
 
@@ -104,22 +96,6 @@ export const Demo = () => {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Ready to Get Started?</h3>
-            <p className="text-gray-600 mb-6">
-              Join leading healthcare providers who are already transforming their post-surgery care
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                Request Demo
-              </Button>
-              <Button size="lg" variant="outline">
-                Start Free Trial
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
