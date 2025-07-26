@@ -35,4 +35,8 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
-        force_orphan: true 
+        force_orphan: true
+        remove_files: |
+          dist/
+          node_modules/
+          .DS_Store 
