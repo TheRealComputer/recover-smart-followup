@@ -1,9 +1,9 @@
 import React from 'react';
-import { Smartphone, Monitor, MessageSquare } from 'lucide-react';
+import { Smartphone, Monitor, MessageSquare, ArrowRight } from 'lucide-react';
 
 export const Demo = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
+    <section id="demo" className="py-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -94,6 +94,19 @@ export const Demo = () => {
               <p className="text-gray-400 text-sm">Live patient conversation</p>
             </div>
           </div>
+        </div>
+
+        {/* Demo Button */}
+        <div className="mt-12 text-center">
+          <a 
+            href="https://calendly.com/followuphealthai/30min" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-semibold group"
+          >
+            See a Demo
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </a>
         </div>
 
       </div>

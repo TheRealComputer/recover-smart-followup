@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-import { Menu, X, Activity } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { HeartLogo } from './HeartLogo';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,20 +10,29 @@ export const Navigation = () => {
     { name: 'Problem', href: '#problem' },
     { name: 'Solution', href: '#solution' },
     { name: 'Features', href: '#features' },
-    { name: 'Technology', href: '#tech' },
-    { name: 'Business', href: '#business' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '#demo' },
   ];
 
   return (
     <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-3">
-            <div className="bg-blue-600 p-2 rounded-lg">
-              <Activity className="h-6 w-6 text-white" />
+          <div className="flex items-center">
+            <img 
+              src="/logo.PNG" 
+              alt="FollowUp Logo" 
+              className="w-16 h-16"
+              onError={(e) => {
+                // Fallback to a simple text logo if image fails to load
+                e.currentTarget.style.display = 'none';
+                const fallback = e.currentTarget.nextSibling as HTMLElement;
+                if (fallback) fallback.classList.remove('hidden');
+              }}
+            />
+            <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg hidden">
+              FU
             </div>
-            <span className="text-xl font-bold text-gray-900">FollowUp</span>
+            <span className="text-2xl font-bold text-gray-900">FollowUp AI</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -36,9 +46,14 @@ export const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+            <a 
+              href="https://calendly.com/followuphealthai/30min" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+            >
               Request Demo
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -65,9 +80,14 @@ export const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <button className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+            <a 
+              href="https://calendly.com/followuphealthai/30min" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+            >
               Request Demo
-            </button>
+            </a>
           </div>
         )}
       </div>

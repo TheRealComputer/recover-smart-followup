@@ -3,7 +3,7 @@ import { Clock, Phone, AlertTriangle, TrendingDown } from 'lucide-react';
 
 export const Problem = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="problem" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -14,67 +14,30 @@ export const Problem = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="bg-red-50 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Clock className="h-8 w-8 text-red-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Time Consuming</h3>
-            <p className="text-gray-600 text-sm">
-              Nurses spend hours daily on routine follow-up calls
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-orange-50 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Phone className="h-8 w-8 text-orange-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Inconsistent Care</h3>
-            <p className="text-gray-600 text-sm">
-              Patients receive different levels of follow-up attention
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-yellow-50 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <AlertTriangle className="h-8 w-8 text-yellow-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Missed Issues</h3>
-            <p className="text-gray-600 text-sm">
-              Critical symptoms go undetected between scheduled calls
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-purple-50 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <TrendingDown className="h-8 w-8 text-purple-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Poor Outcomes</h3>
-            <p className="text-gray-600 text-sm">
-              Higher readmission rates and patient dissatisfaction
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-xl p-8 mt-12 border border-gray-200">
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 mb-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-red-600 mb-2">30%</div>
-              <div className="font-semibold text-gray-900 mb-1">Readmission Rate</div>
-              <div className="text-sm text-gray-600">For post-surgical patients</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">20%</div>
+              <div className="text-gray-700 text-sm">of patients experience a complication after surgery</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-orange-600 mb-2">60%</div>
-              <div className="font-semibold text-gray-900 mb-1">Staff Time</div>
-              <div className="text-sm text-gray-600">Spent on manual follow-ups</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">$17B+</div>
+              <div className="text-gray-700 text-sm">of added costs to US hospitals annually from preventable readmissions</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-600 mb-2">40%</div>
-              <div className="font-semibold text-gray-900 mb-1">Patient Anxiety</div>
-              <div className="text-sm text-gray-600">Due to inconsistent communication</div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">$43K</div>
+              <div className="text-gray-700 text-sm">in median hospitalization costs per patient</div>
             </div>
           </div>
         </div>
+
+        <div className="text-center mt-12">
+          <p className="text-2xl text-black max-w-4xl mx-auto leading-relaxed">
+            We aim to completely redo post-op telehealth enabling complete automation so medical staff can do more.
+          </p>
+        </div>
+
+
       </div>
     </section>
   );
